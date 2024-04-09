@@ -1,0 +1,5 @@
+ How to Run this project...
+ step 1 - clone its repository to your local machine using git bash or terminal
+ step 2 - Cd into the cloned file and type the command "code ." or drag and drop the file into VScode
+ step - 3 Once in the file run "npm install" to install node modules
+ step - 4 After this process run "npm run dev" to view in local host
