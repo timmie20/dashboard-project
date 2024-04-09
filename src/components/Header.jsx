@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import profile_avatar from "../assets/icons/profile 1.png";
 import { AppContext } from "../context/AppContext";
@@ -8,13 +8,18 @@ import NavMobileView from "./NavMobileView";
 const Header = () => {
   const { pathname } = useContext(AppContext);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   return (
     <>
       <div className="relative h-fit bg-white">
         <div className="flex items-center justify-between px-[21px] py-[14px]">
           {/* side bar content for mobile view*/}
 
-          <div className="block lg:hidden">
+          <div className="block md:hidden">
             {!isOpen ? (
               <IoMenu size={30} onClick={() => setIsOpen(true)} />
             ) : (
